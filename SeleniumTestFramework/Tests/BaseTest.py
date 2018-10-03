@@ -1,12 +1,10 @@
 import unittest
-import Browser
+from Browser import Browser as browser
 
 class BaseTest(unittest.TestCase):
     
-    self.driver
-    
     def setUp(self):
-        self.driver = Browser.getBrowser("firefox")
+        self.driver = browser.getBrowser("firefox")
         self.driver.open("http://google.com")
         
     def tearDown(self):

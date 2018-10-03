@@ -1,18 +1,15 @@
-
 from selenium import webdriver
-from lib2to3.pgen2 import driver
+from Browser.AbstractFactory import AbstractFactory
 
-class FirefoxBrowser(AbstractBrowserFactory):
-    
-    self.driver
+class FirefoxBrowser(AbstractFactory):
     
     def __init__(self):
-        driver = webdriver.Firefox
-        driver.fullscreen_window()
+        self.driver = webdriver.Firefox
+        self.driver.fullscreen_window()
     
     def open(self, url):
-        driver.open(url)
+        self.driver.open(url)
         
     def close(self):
-        driver.close();
+        self.driver.close();
         

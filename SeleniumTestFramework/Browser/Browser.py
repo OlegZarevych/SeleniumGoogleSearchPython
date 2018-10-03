@@ -1,11 +1,10 @@
-import FirefoxBrowser
+import Browser.FirefoxBrowser
 
 class Browser():
     
     def getBrowser(self, browserName):
         
         browsers = {
-            "firefox": FirefoxBrowser 
+            "firefox": Browser.FirefoxBrowser 
             }
-    
-    return browsers.get(browserName, lambda: 'Invalid browser name')
+        return browsers.get(browserName, lambda: 'Invalid browser name')
