@@ -1,6 +1,5 @@
 import unittest
 from BrowserFactory.Browser import Browser
-from Pages.Page import Page
 
 class BaseTest(unittest.TestCase):
     
@@ -10,8 +9,7 @@ class BaseTest(unittest.TestCase):
     def setUp(self):
         browser = Browser("firefox")
         self.driver = browser.getBrowser()
-        self.page = Page(self.driver)
-        self.driver.open(self.url)
+        browser.open(self.url)
         
     def tearDown(self):
         self.driver.close()

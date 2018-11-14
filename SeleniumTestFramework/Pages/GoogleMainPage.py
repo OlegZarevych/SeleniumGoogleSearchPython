@@ -3,14 +3,15 @@ from Pages.GoogleResultPage import GoogleResultPage
 from Pages.Page import Page
 
 class GoogleMainPage(Page):
-   
-    def __init__(self):
-        pass
     
     SEARCH_INPUT = (By.NAME, 'q')
     SEARCH_BTN = (By.NAME, 'btnK')
+       
+    def __init__(self, driver):
+        super().__init__(driver)
+        pass
     
     def search_text(self, text):
-        self.SEARCH_INPUT.send_keys(text)
-        self.SEARCH_BTN.submit()
+        self.find_element(self.SEARCH_INPUT)
+        self.find_element(self.SEARCH_BTN)
         return GoogleResultPage
