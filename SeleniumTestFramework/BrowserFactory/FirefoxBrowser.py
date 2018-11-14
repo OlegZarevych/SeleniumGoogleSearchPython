@@ -1,6 +1,8 @@
 from selenium import webdriver
 from BrowserFactory.AbstractFactory import AbstractFactory
 
+# This class is obsolete
+
 class FirefoxBrowser(AbstractFactory):
     
     def __init__(self):

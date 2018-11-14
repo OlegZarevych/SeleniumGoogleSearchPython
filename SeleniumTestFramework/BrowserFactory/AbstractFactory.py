@@ -1,5 +1,7 @@
 from abc import ABC, abstractmethod
 
+# This class is obsolete
+
 class AbstractFactory(ABC):
     
     @abstractmethod
