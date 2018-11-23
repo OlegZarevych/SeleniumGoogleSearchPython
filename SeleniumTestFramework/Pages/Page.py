@@ -7,5 +7,6 @@ class Page(object):
         self.driver = driver
                 
     def find_element(self, locator):
-        return self.driver.find_element(locator)
+        element = self.driver.find_element_by_xpath(locator)
+        return element
                 
