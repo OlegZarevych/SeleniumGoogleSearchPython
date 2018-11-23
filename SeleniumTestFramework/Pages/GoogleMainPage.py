@@ -10,9 +10,8 @@ class GoogleMainPage(Page):
        
     def __init__(self, driver):
         super().__init__(driver)
-        pass
     
     def search_text(self, text):
         self.find_element(self.SEARCH_INPUT).send_keys(text)
         self.find_element(self.SEARCH_BTN).submit()
-        return GoogleResultPage
+        return GoogleResultPage(self.driver)
